@@ -1,19 +1,18 @@
+// src/components/MainDashboard.jsx
+import TaskList from './TaskList';
+
 function MainDashboard() {
+  const tasks = [
+    { id: 1, title: "Сделать домашку по React", completed: false },
+    { id: 2, title: "Выучить props", completed: true },
+    { id: 3, title: "Отправить проект на GitHub", completed: false },
+    { id: 4, title: "Сделать CSS modules", completed: false }
+  ];
+
   return (
     <main style={{ padding: '16px' }}>
       <h2>Главная панель</h2>
-      <p>Здесь в будущем будет список задач и другие блоки.</p>
-
-      <div style={{
-        marginTop: '16px',
-        padding: '16px',
-        border: '1px solid #ddd',
-        borderRadius: '8px',
-        backgroundColor: '#ffffff'
-      }}>
-        <h3>Пример блока</h3>
-        <p>Это просто заглушка, чтобы увидеть структуру страницы.</p>
-      </div>
+      <TaskList tasks={tasks} />
     </main>
   );
 }
