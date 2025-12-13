@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #40f670;
+  background-color: #f1f7f2;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -69,4 +69,13 @@ button:focus-visible {
 
 * {
   color: black !important;
+}
+input, select {
+  color: black;
+}
+input, select {
+  background-color: white;
+}
+input[type="radio"] {
+  accent-color: green;
 }
