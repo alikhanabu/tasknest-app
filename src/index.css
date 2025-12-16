@@ -79,3 +79,18 @@ input, select {
 input[type="radio"] {
   accent-color: green;
 }
+.container {
+  padding: 20px;
+  background: white;
+  min-height: 100vh;
+}
+
+.board {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+button {
+  margin-top: 5px;
+}
