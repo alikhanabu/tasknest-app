@@ -1,20 +1,25 @@
-// src/components/MainDashboard.jsx
-import TaskList from './TaskList';
+import './MainDashboard.scss'
 
-function MainDashboard() {
-  const tasks = [
-    { id: 1, title: "Сделать домашку по React", completed: false },
-    { id: 2, title: "Выучить props", completed: true },
-    { id: 3, title: "Отправить проект на GitHub", completed: false },
-    { id: 4, title: "Сделать CSS modules", completed: false }
-  ];
-
+function MainDashboard({ boards }) {
   return (
-    <main style={{ padding: '16px' }}>
-      <h2>Главная панель</h2>
-      <TaskList tasks={tasks} />
-    </main>
-  );
+    <div className="dashboard grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {boards.map(board => (
+        <div
+          key={board.id}
+          className="board bg-slate-800 border border-slate-700
+                     flex flex-col gap-2
+                     hover:border-blue-500 hover:shadow-lg transition"
+        >
+          <h2 className="text-white text-lg font-semibold">
+            {board.title}
+          </h2>
+          <p className="text-gray-400">
+            {board.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  )
 }
 
-export default MainDashboard;
+export default MainDashboard
