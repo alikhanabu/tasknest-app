@@ -1,13 +1,10 @@
-import './MainDashboard.scss'
+import BoardCard from './BoardCard'
 
 function MainDashboard({ boards }) {
   return (
-    <div className="dashboard">
+    <div className="p-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {boards.map(board => (
-        <div key={board.id} className="board">
-          <h2 className="board-title">{board.title}</h2>
-          <p className="board-desc">{board.description}</p>
-        </div>
+        <BoardCard key={board.id} board={board} />
       ))}
     </div>
   )
